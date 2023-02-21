@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { about } from '@/data/data';
 
 type Props = {};
 
-export const About = (props: Props) => {
+const About = (props: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -32,13 +33,10 @@ export const About = (props: Props) => {
           <span className="underline decoration-[#f7ab0a]/50">little</span>{' '}
           background
         </h4>
-        <p className="text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id repellat
-          pariatur incidunt consectetur ab, porro inventore vel quasi dolorem
-          quam reiciendis beatae quidem quos dolores eum accusamus impedit
-          blanditiis sit?
-        </p>
+        <p className="text-base">{about.description}</p>
       </div>
     </motion.div>
   );
 };
+
+export default About;

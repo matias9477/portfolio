@@ -3,7 +3,7 @@ import React from 'react';
 
 type Props = {};
 
-export const Projects = (props: Props) => {
+const Projects = (props: Props) => {
   const projects = [1, 2, 3, 4, 5];
   return (
     <motion.div
@@ -16,7 +16,7 @@ export const Projects = (props: Props) => {
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/40">
         {projects.map((project, index) => {
           return (
             <motion.div
@@ -27,9 +27,10 @@ export const Projects = (props: Props) => {
               className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
             >
               <motion.img
-                initial={{ y: -200, opacity: 0 }}
+                initial={{ y: -150, opacity: 0 }}
                 transition={{ duration: 0.7 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                className="lg:h-72"
                 src="https://www.interviewbit.com/blog/wp-content/uploads/2021/12/React-Projects.png"
                 alt=""
               />
@@ -58,3 +59,5 @@ export const Projects = (props: Props) => {
     </motion.div>
   );
 };
+
+export default Projects;
